@@ -21,7 +21,7 @@ section::before {
   left: 0;
   width: 50%;
   height: 100%;
-  background: rgb(11, 205, 195);
+  background: aqua;
 }
 section .container {
   position: relative;
@@ -159,6 +159,7 @@ section .container .contactForm .formBox .inputBox span {
   color: #333;
   transition: 0.5s;
   pointer-events: none;
+  opacity: .5;
 }
 section .container .contactForm .formBox .inputBox textarea:focus ~ span,
 section .container .contactForm .formBox .inputBox input:focus ~ span,
@@ -169,6 +170,7 @@ section .container .contactForm .formBox .inputBox input:valid ~ span {
   font-weight: 300;
   color: #ff568c;
   letter-spacing: 1px;
+  opacity: 1;
 }
 section .container .contactForm .formBox .inputBox input[type="submit"] {
   position: relative;
@@ -181,4 +183,71 @@ section .container .contactForm .formBox .inputBox input[type="submit"] {
 }
 section .container .contactForm .formBox .inputBox input[type="submit"]:hover {
   background: #ff568c;
+}
+
+/* responsive design starts here */
+@media (max-width: 1200px) {
+  section .container {
+    width: 90%;
+    min-width: auto;
+    margin: 20px;
+    box-shadow: 0 20px 50px rgb(0, 0, 0, 0.2);
+  }
+  section .container .contactinfo {
+    position: relative;
+    top: 0;
+    height: 550px;
+    /* box-shadow: none; */
+  }
+  section .container .contactForm {
+    position: relative;
+    width: calc(100% - 350px);
+    margin-left: 0;
+    padding-left: 40px;
+    height: 550px;
+  }
+}
+@media (max-width: 990px) {
+  section {
+    background-color: aqua;
+  }
+  section::before {
+    display: none;
+  }
+  section .container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  section .container .contactinfo {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+  }
+  section .container .contactForm {
+    width: 100%;
+    height: auto;
+  }
+  section .container .contactinfo .sci {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 600px) {
+  section .container .contactinfo {
+    padding: 25px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  section .container .contactForm {
+    padding: 25px;
+  }
+  section .container .contactinfo .sci {
+    margin-top: 40px;
+  }
+  section .container .contactForm .formBox .inputBox.w50 {
+    width: 100%;
+  }
 }
