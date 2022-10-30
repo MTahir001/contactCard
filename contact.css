@@ -87,7 +87,7 @@ align-self: center;
 }
 section .container .contactinfo .sci li {
   list-style: none;
-  margin-right: 15px;
+  margin: 0 8px;
 }
 section .container .contactinfo .sci li a {
   text-decoration: none;
