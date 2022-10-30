@@ -83,6 +83,7 @@ section .container .contactinfo .info li:hover span:nth-child(2) {
 section .container .contactinfo .sci {
   display: flex;
   position: relative;
+align-self: center;
 }
 section .container .contactinfo .sci li {
   list-style: none;
